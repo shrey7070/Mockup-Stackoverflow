@@ -6,7 +6,7 @@ import UserProfile from "../../components/Profile/UserProfile/UserProfile";
 import QuestionList from "../../components/QuestionList/QuestionList";
 import Loader from "../../components/Loader/Loader";
 
-import { getUserData } from "./actionMethods";
+import { getUserData, getUserTagsData } from "./actionMethods";
 const Profile = (props) => {
   const [loader, setLoader] = useState(false);
 
@@ -24,12 +24,21 @@ const Profile = (props) => {
       } catch (err) {
         console.log(err);
       }
+    }
+    async function fetchTags() {
+      try {
+        const response = await getUserTagsData(userId);
+        setTopTags(response.items);
+      } catch (err) {
+        console.log(err);
+      }
       setLoader(false);
     }
     if (props.match.params.id) {
       userId = props.match.params.id;
     }
     fetchData();
+    fetchTags();
   }, []);
 
   return (
@@ -44,9 +53,11 @@ const Profile = (props) => {
           <UserProfile userData={userData} />
         )}
       </div>
-      {/* <div className="topTagsDiv">
-        <TopTags />
-      </div> */}
+      <hr />
+      <div className="topTagsDiv">
+        <TopTags tags={topTags} />
+      </div>
+      <hr />
       {/* <div className="questionsDiv"><QuestionList /></div> */}
     </div>
   );

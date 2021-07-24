@@ -67,7 +67,7 @@ const UserProfile = (props) => {
           </div>
 
           {/* User Info : Name,Location,Link */}
-          <div className="col-md-8 col-sm-12 mx-auto mt-5">
+          <div className="col-md-8 col-sm-12 mx-auto mt-0">
             <div className="userNameDiv">
               <h3>{currentUser.display_name}</h3>
             </div>
