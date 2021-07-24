@@ -20,11 +20,17 @@ const Questions = () => {
 
   return (
     <div className="container-fluid">
-      <div className="w-100 m-auto mb-5">
-        <h1 className="text-center">Top Questions[Featured]</h1>
+      <div className="w-100 m-auto my-3">
+        <h1 className="text-center">Top Questions [Featured]</h1>
       </div>
-      <div className="container">
-        <QuestionList {...questions} />
+      <div className="container mb-5">
+        <div className="questionMainDiv">
+          <ul className="list-group">
+            {questions.map((que, i) => {
+              return <QuestionList key={i} {...que} />;
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );

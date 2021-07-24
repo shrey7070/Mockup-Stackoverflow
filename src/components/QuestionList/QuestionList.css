@@ -5,7 +5,7 @@
 .votes {
   padding: 10px;
   display: inline-block;
-  height: 38px;
+  height: 46px;
   min-width: 50px;
   margin: 0 3px 0 0;
   font-size: 11px;
@@ -22,11 +22,11 @@
 }
 .views {
   display: inline-block;
-  height: 38px;
+  height: 46px;
   min-width: 50px;
   margin: 0 7px 0 0;
   font-size: 11px;
-  padding: 7px 10px;
+  padding: 10px;
 }
 
 .mini-counts {
@@ -60,4 +60,9 @@
 
 .time_ownerDiv span:first-child {
   color: gray;
+}
+
+.owner_totalcounts {
+  color: #848d95;
+  font-weight: bold;
 }

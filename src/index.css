@@ -19,5 +19,13 @@
 }
 
 .top-1 {
-  top: -1px;
+  top: 3px;
+}
+
+.bg-green {
+  background-color: #5eba7d;
+}
+
+.text-brown {
+  color: #a35200 !important;
 }
