@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { monthNames } from "../../helper/constant";
 import "./QuestionList.css";
 
 const QuestionList = (props) => {
-  // formatHandler views more than 999
+  // formatHandler for views more than 999
   const kFormatHandler = (num) => {
     return Math.abs(num) > 999
       ? Math.sign(num) * (Math.abs(num) / 1000).toFixed(1) + "k"
@@ -11,21 +12,6 @@ const QuestionList = (props) => {
 
   const dateFormatter = (last_edit_date) => {
     var date = new Date(1000 * last_edit_date);
-    // monthNames for priniting Month
-    const monthNames = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sept",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
     return (
       monthNames[date.getMonth()] +
       " " +
