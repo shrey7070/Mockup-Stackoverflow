@@ -38,3 +38,19 @@ export const getUserTagsData = (userId) => {
 };
 
 // fetching user  Questions from userId
+export const getUserQuestionData = (userId) => {
+  return fetch(
+    `${API}/2.3/users/${userId}/questions?order=desc&sort=activity&site=stackoverflow`,
+    {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    }
+  )
+    .then((resp) => {
+      return resp.json();
+    })
+    .catch((err) => console.log(err));
+};

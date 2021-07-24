@@ -120,7 +120,7 @@ const QuestionList = (props) => {
                 </span>
                 <span className="owner_totalcounts">
                   {" "}
-                  {kFormatHandler(props.owner.reputation)}
+                  {kFormatHandler(props.owner.reputation) || ""}
                 </span>
               </div>
             </div>
