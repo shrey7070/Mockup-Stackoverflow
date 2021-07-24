@@ -1,0 +1,17 @@
+@media (min-width: 576px) {
+  .formWidth {
+    width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .formWidth {
+    width: 50%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 992px) {
+  .formWidth {
+    width: 70%;
+  }
+}

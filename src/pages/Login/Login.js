@@ -4,6 +4,8 @@ import { useHistory } from "react-router-dom";
 
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 
+import "./Login.css";
+
 const Login = () => {
   //useHistory Hook for using history instance
   const history = useHistory();
@@ -38,7 +40,7 @@ const Login = () => {
       <div className="header w-75 m-auto mt-5">
         <h1 className="text-center">LOGIN PAGE</h1>
       </div>
-      <div className="border border-2 p-3 p-md-5 mt-5 w-50 mx-auto">
+      <div className="border border-2 p-3 formWidth p-md-5 mt-5 mx-auto">
         <ValidatorForm onSubmit={submitbtnHandler} className="w-100 mx-auto">
           <div className="mt-3 form-group">
             <label htmlFor="email">Email address</label>
