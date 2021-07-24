@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
+import Loader from "../../components/Loader/Loader";
 import QuestionList from "../../components/QuestionList/QuestionList";
 
 import { getQuestions } from "./actionMethod";
 
 const Questions = () => {
   const [questions, setQuestions] = useState([]);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     async function fetchData(req, res, next) {
       try {
+        setLoader(true);
         const response = await getQuestions();
         setQuestions(response.items);
+        setLoader(false);
       } catch (err) {
         console.log(err);
       }
@@ -26,9 +30,13 @@ const Questions = () => {
       <div className="container mb-5">
         <div className="questionMainDiv">
           <ul className="list-group">
-            {questions.map((que, i) => {
-              return <QuestionList key={i} {...que} />;
-            })}
+            {loader ? (
+              <Loader />
+            ) : (
+              questions.map((que, i) => {
+                return <QuestionList key={i} {...que} />;
+              })
+            )}
           </ul>
         </div>
       </div>
