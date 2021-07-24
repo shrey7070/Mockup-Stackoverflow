@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./QuestionList.css";
 
 const QuestionList = (props) => {
@@ -109,9 +110,15 @@ const QuestionList = (props) => {
                     props.last_edit_date || props.last_activity_date
                   )}
                 </span>
-                <span className="cursor-pointer queText-color">
-                  {" "}
-                  {props.owner.display_name}
+                <span className="cursor-pointer  queText-color">
+                  {/* link to render profile page of specific userId */}
+                  <Link
+                    className="text-decoration-none"
+                    to={`/profile/${props.owner.user_id}`}
+                  >
+                    {" "}
+                    {props.owner.display_name}
+                  </Link>
                 </span>
                 <span className="owner_totalcounts">
                   {" "}
