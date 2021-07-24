@@ -9,7 +9,7 @@ const UserProfile = (props) => {
             {/* Profile Image */}
             <div className="profiePic">
               <img
-                lazy={true}
+                lazy="true"
                 width={150}
                 src={currentUser.profile_image}
                 alt="userProfileImage"
@@ -28,9 +28,9 @@ const UserProfile = (props) => {
                     {" "}
                     <div className="s-badge w-100 justify-content-between s-badge__gold">
                       <div>
-                        <span class="flex-item badge1"></span>
+                        <span className="flex-item badge1"></span>
                       </div>
-                      <span class="d-flex flex__center fl1">24</span>
+                      <span className="d-flex flex__center fl1">24</span>
                     </div>
                   </div>
                 ) : (
