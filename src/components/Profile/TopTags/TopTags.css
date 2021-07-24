@@ -1,0 +1,10 @@
+.ToptagNameDiv {
+  background-color: #e1ecf4;
+  cursor: pointer;
+  color: #39739d;
+  display: inline-block;
+}
+
+.ToptagNameDiv:hover {
+  background-color: #d1e5f3;
+}

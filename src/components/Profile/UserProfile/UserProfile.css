@@ -1,0 +1,54 @@
+.badge1,
+.badge2,
+.badge3 {
+  margin-right: 3px;
+  margin-left: 2px;
+  width: 6px;
+}
+
+.badge1 {
+  height: 10px;
+  width: 10px;
+  background-color: #f1b600;
+  border-radius: 50%;
+  display: inline-block;
+}
+.badge2 {
+  height: 10px;
+  width: 10px;
+  background-color: #9a9c9f;
+  border-radius: 50%;
+  display: inline-block;
+}
+.badge3 {
+  height: 10px;
+  width: 10px;
+  background-color: #ab825f;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.s-badge__gold {
+  border: 1px solid #f1b600;
+  background-color: #fff4d1;
+}
+
+.s-badge__silver {
+  border: 1px solid #9a9c9f;
+  background-color: #e8e8e8;
+}
+
+.s-badge__bronze {
+  border: 1px solid #ab825f;
+  background-color: #f2e9e1;
+}
+
+.s-badge {
+  color: #3c4146;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 10px;
+  border-radius: 3px;
+}
