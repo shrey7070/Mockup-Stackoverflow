@@ -37,8 +37,6 @@ const QuestionList = (props) => {
     );
   };
 
-  console.log(props);
-
   return (
     <div className="questionMainDiv">
       <ul className="list-group">

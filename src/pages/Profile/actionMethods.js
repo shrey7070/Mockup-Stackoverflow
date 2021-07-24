@@ -1,8 +1,10 @@
-// Fetching featured questions from API
+// fetching user Data from userId
+
 import { API } from "../../helper/constant";
-export const getQuestions = () => {
+
+export const getUserData = (userId) => {
   return fetch(
-    `${API}/2.3/questions/featured?order=desc&sort=activity&site=stackoverflow`,
+    `${API}/2.3/users/${userId}?order=desc&sort=reputation&site=stackoverflow`,
     {
       method: "GET",
       headers: {
@@ -16,3 +18,6 @@ export const getQuestions = () => {
     })
     .catch((err) => console.log(err));
 };
+
+// fetching user Tags from userId
+// fetching user  Questions from userId

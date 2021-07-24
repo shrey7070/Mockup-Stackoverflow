@@ -29,3 +29,24 @@
 .text-brown {
   color: #a35200 !important;
 }
+
+.text-gray {
+  color: gray !important;
+}
+
+.m4 {
+  margin: 4px !important;
+}
+
+.m2 {
+  margin: 2px !important;
+}
+
+.flex-item {
+  flex: 1 auto !important;
+}
+
+.flex__center {
+  justify-content: center !important;
+  align-items: center !important;
+}

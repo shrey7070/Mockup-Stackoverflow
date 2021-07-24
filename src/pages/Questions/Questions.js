@@ -9,15 +9,15 @@ const Questions = () => {
   const [loader, setLoader] = useState(false);
 
   useEffect(() => {
-    async function fetchData(req, res, next) {
+    async function fetchData() {
       try {
         setLoader(true);
         const response = await getQuestions();
         setQuestions(response.items);
-        setLoader(false);
       } catch (err) {
         console.log(err);
       }
+      setLoader(false);
     }
     fetchData();
   }, []);
