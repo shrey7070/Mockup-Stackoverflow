@@ -6,7 +6,7 @@ const UserProfile = (props) => {
       {currentUser !== undefined ? (
         <>
           <div className="p-3 text-center border">
-            {/* Profile Image */}
+            {/* Profile Image code starts from here*/}
             <div className="profiePic">
               <img
                 lazy="true"
@@ -15,13 +15,15 @@ const UserProfile = (props) => {
                 alt="userProfileImage"
               />
             </div>
+            {/* Profile Image code ends here*/}
+
             <div className="py-3">
               <div className="text-center reputation">
                 <span className="font-16">{currentUser.reputation} </span>
                 <span className="text-gray font-12">REPUTATION</span>
               </div>
 
-              {/* Badges */}
+              {/* Badges code starts from here*/}
               <div className="d-flex m4 font-12 badges">
                 {currentUser.badge_counts.gold > 0 ? (
                   <div className="flex-item m2">
@@ -65,8 +67,9 @@ const UserProfile = (props) => {
               </div>
             </div>
           </div>
+          {/* Badges code ends here*/}
 
-          {/* User Info : Name,Location,Link */}
+          {/* User Info : Name,Location,Link starts from here*/}
           <div className="col-md-8 col-sm-12 mx-auto mt-0">
             <div className="userNameDiv">
               <h3>{currentUser.display_name}</h3>
@@ -85,6 +88,7 @@ const UserProfile = (props) => {
               </a>{" "}
             </div>
           </div>
+          {/* User Info : Name,Location,Link ends here*/}
         </>
       ) : (
         ""

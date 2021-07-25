@@ -17,6 +17,7 @@ const Routes = () => {
   return (
     <Router history={history}>
       <Switch>
+        {/* only users who authenticated, can access the PrivateRoutes */}
         <PrivateRoute path="/profile/:id" component={Profile} />
         <PrivateRoute path="/questions" component={Questions} />
         <Route exact path="/" component={Login} />

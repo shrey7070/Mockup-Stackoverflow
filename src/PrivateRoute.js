@@ -1,8 +1,8 @@
 import { Redirect, Route } from "react-router-dom";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
+  // using email as a authentication token for accessing private routes
   const isAuthenticated = localStorage.getItem("email");
-  // using email as a token for accessing private routes
 
   return (
     <Route

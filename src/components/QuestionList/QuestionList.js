@@ -10,6 +10,7 @@ const QuestionList = (props) => {
       : Math.sign(num) * Math.abs(num);
   };
 
+  // dateformat Handler according to Design
   const dateFormatter = (last_edit_date) => {
     var date = new Date(1000 * last_edit_date);
     return (
@@ -30,7 +31,7 @@ const QuestionList = (props) => {
           {/* votes / answer / views part ends here */}
 
           <div className="col-sm-12 align-items-start d-flex col-md-3">
-            {/* votes part starts here */}
+            {/* votes part starts from here */}
             <div className="votes d-md-block d-flex text-center left_boxesDiv">
               <div className="mx-sm-1">
                 <span className="font-16">{props.score}</span>
@@ -38,7 +39,7 @@ const QuestionList = (props) => {
               <span className="font-12 position-relative m-auto m2"> vote</span>
             </div>
 
-            {/* answer part starts here */}
+            {/* answer part starts from here */}
             <div
               style={
                 props.answer_count > 0 ? { border: "1px solid #5eba7d" } : {}
@@ -55,7 +56,7 @@ const QuestionList = (props) => {
               </span>
             </div>
 
-            {/* views part starts here */}
+            {/* views part starts from here */}
             <div
               className={`d-md-block d-flex views text-center left_boxesDiv 
               ${props.view_count > 1000 ? "text-brown" : ""}`}
@@ -73,10 +74,15 @@ const QuestionList = (props) => {
 
           {/* votes / answer / views part ends here */}
 
+          {/* question details part starts from here */}
           <div className="col-sm-12 mb-2 col-md-9">
             <div className="questionDiv mt-1">
-              <span className="p-1 px-2 rounded bg-primary text-white">
-                +{props.bounty_amount}
+              <span
+                className={`rounded ${
+                  props.bounty_amount ? "bg-primary p-1 px-2" : ""
+                } text-white`}
+              >
+                {props.bounty_amount ? "+" + props.bounty_amount : ""}
               </span>
               <span className="mx-1 queText-color">{props.title}</span>
             </div>
@@ -115,6 +121,7 @@ const QuestionList = (props) => {
               </div>
             </div>
           </div>
+          {/* question details part ends here */}
         </li>
       </ul>
     </div>

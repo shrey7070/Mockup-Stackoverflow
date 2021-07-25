@@ -18,6 +18,9 @@ const Profile = (props) => {
   const [topTags, setTopTags] = useState([]);
   const [questions, setQuestions] = useState([]);
   let userId;
+  if (props.match.params.id) {
+    userId = props.match.params.id;
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -50,15 +53,12 @@ const Profile = (props) => {
       }
       setLoader(false);
     }
-    if (props.match.params.id) {
-      userId = props.match.params.id;
-    }
 
     // async API call functions
     fetchData();
     fetchTags();
     fetchTopQuestions();
-  }, []);
+  }, [userId]);
 
   return (
     <div className="container profilemainDiv">
