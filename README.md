@@ -16,8 +16,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Snapshots
 
 <p align="left">
-  <img src="https://github.com/shrey7070/Mockup-Stackoverflow/master/public/assets/so_Login.png" />
-  <img src="https://github.com/shrey7070/Mockup-Stackoverflow/master/public/assets/so_questions.png" />
-  <img src="https://github.com/shrey7070/Mockup-Stackoverflow/master/public/assets/so_profile1.png" />
-  <img src="https://github.com/shrey7070/Mockup-Stackoverflow/master/public/assets/so_profile2.png" />
+  <img src="https://github.com/shrey7070/Mockup-Stackoverflow/public/assets/so_Login.png" />
+  <img src="https://github.com/shrey7070/Mockup-Stackoverflow/public/assets/so_questions.png" />
+  <img src="https://github.com/shrey7070/Mockup-Stackoverflow/public/assets/so_profile1.png" />
+  <img src="https://github.com/shrey7070/Mockup-Stackoverflow/public/assets/so_profile2.png" />
 </p>
