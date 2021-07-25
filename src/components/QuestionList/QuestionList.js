@@ -35,7 +35,7 @@ const QuestionList = (props) => {
               <div className="mx-sm-1">
                 <span className="font-16">{props.score}</span>
               </div>
-              <span className="font-12 position-relative m-auto"> vote</span>
+              <span className="font-12 position-relative m-auto m2"> vote</span>
             </div>
 
             {/* answer part starts here */}
@@ -50,7 +50,9 @@ const QuestionList = (props) => {
               <div className="mx-sm-1">
                 <span className="font-16">{props.answer_count}</span>
               </div>
-              <span className="font-12 position-relative m-auto">answer</span>
+              <span className="font-12 position-relative m-auto m2">
+                answer
+              </span>
             </div>
 
             {/* views part starts here */}
@@ -63,7 +65,9 @@ const QuestionList = (props) => {
                   {kFormatHandler(props.view_count)}
                 </span>
               </div>
-              <span className="font-12 position-relative  m-auto">views</span>
+              <span className="font-12 position-relative  m-auto m2">
+                views
+              </span>
             </div>
           </div>
 
