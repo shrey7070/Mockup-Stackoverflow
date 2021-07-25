@@ -1,6 +1,6 @@
 # Stackoverflow Mockup
 
-A Stackoverflow's featured Questions and User Profile page webapp with ReactJs library.
+Stackoverflow's featured Questions and User Profile page developed with ReactJs library.
 
 # Getting Started with Create React App
 
